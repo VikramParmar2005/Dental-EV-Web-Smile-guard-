@@ -1,0 +1,501 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: url("C:/Users/Vikra/OneDrive/Desktop/Dental ev website/denta nj.jpg") no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+/* HEADER STYLING */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 2px solid #28a745;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    animation: fadeInDown 0.6s ease-out;
+}
+
+.logo h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #28a745;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav a:hover {
+    color: #28a745;
+    transform: scale(1.1);
+}
+
+/* CONTAINER STYLING */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    width: 80%;
+    max-width: 600px;
+    margin-top: 100px;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+/* CONTENT BLOCK STYLING */
+.content-block {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #28a745;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    width: 100%;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.content-block:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px);
+}
+
+.content-block h2 {
+    font-size: 24px;
+    color: #28a745;
+    margin-bottom: 10px;
+}
+
+.content-block p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #ddd;
+}
+
+/* FORM STYLING */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+input {
+    padding: 12px;
+    width: 100%;
+    border: 1px solid #28a745;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #218838;
+    outline: none;
+}
+
+/* BUTTON STYLING */
+button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #28a745, #218838);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    margin-top: 20px;
+}
+
+button:hover {
+    background: linear-gradient(45deg, #218838, #1e7e34);
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0 , 0, 0.4);
+}
+
+/* FOOTER STYLING */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+}
+
+/* ANIMATIONS */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 30px;
+    }
+    header {
+        padding: 15px 20px;
+    }
+    .logo h1 {
+        font-size: 24px;
+    }
+    nav a {
+        font-size: 14px;
+    }
+}
+
+/* DASHBOARD STYLING */
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.dashboard-item {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #28a745;
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.dashboard-item:hover {
+    transform: translateY(-5px);
+}
+
+/* NOTIFICATION STYLES */
+.notification {
+    background: rgba(255, 255, 255, 0.2);
+    border-left: 5px solid #28a745;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    animation: fadeInUp 0.5s ease-out;
+}
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: url("C:/Users/Vikra/OneDrive/Desktop/Dental ev website/denta nj.jpg") no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+/* HEADER STYLING */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 2px solid #28a745;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    animation: fadeInDown 0.6s ease-out;
+}
+
+.logo h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #28a745;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav a:hover {
+    color: #28a745;
+    transform: scale(1.1);
+}
+
+/* CONTAINER STYLING */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    width: 80%;
+    max-width: 600px;
+    margin-top: 100px;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+/* CONTENT BLOCK STYLING */
+.content-block {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #28a745;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    width: 100%;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.content-block:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px);
+}
+
+.content-block h2 {
+    font-size: 24px;
+    color: #28a745;
+    margin-bottom: 10px;
+}
+
+.content-block p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #ddd;
+}
+
+/* FORM STYLING */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+input {
+    padding: 12px;
+    width: 100%;
+    border: 1px solid #28a745;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #218838;
+    outline: none;
+}
+
+/* BUTTON STYLING */
+button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #28a745, #218838);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    margin-top: 20px;
+}
+
+button:hover {
+    background: linear-gradient(45deg, #218838, #1e7e34);
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0 , 0, 0.4);
+}
+
+/* FOOTER STYLING */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0, 0.7);
+    color: white;
+}
+
+/* ANIMATIONS */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 30px;
+    }
+    header {
+        padding: 15px 20px;
+    }
+    .logo h1 {
+        font-size: 24px;
+    }
+    nav a {
+        font-size: 14px;
+    }
+}
+
+/* DASHBOARD STYLING */
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.dashboard-item {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #28a745;
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.dashboard-item:hover {
+    transform: translateY(-5px);
+}
+
+/* NOTIFICATION STYLES */
+.notification {
+    background: rgba(255, 255, 255, 0.2);
+    border-left: 5px solid #28a745;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    animation: fadeInUp 0.5s ease-out;
+}
+
+/* CHART STYLING */
+.chart {
+    width: 100%;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #28a745;
+    border-radius: 10px;
+    margin-top: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.chart canvas {
+    width: 100%;
+    height: 100%;
+}
+
+/* PROFILE CARD STYLING */
+.profile-card {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #28a745;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.profile-card:hover {
+    transform: translateY(-5px);
+}
+
+.profile-card img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.profile-card h3 {
+    color: #28a745;
+    margin: 10px 0;
+}
+
+.profile-card p {
+    color: #ddd;
+} 

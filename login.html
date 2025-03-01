@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Smile Guard - A secure dental insurance management system for healthcare professionals.">
+    <title>Smile Guard - Dental Insurance Management</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <h1>Smile Guard</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#patients">Patients</a></li>
+                <li><a href="#eligibility">Eligibility Check</a></li>
+                <li><a href="#reports">Reports</a></li>
+                <li><a href="#logout" id="logoutBtn">Log Out</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Container -->
+    <main class="container">
+        <section class="hero">
+            <h1 data-aos="fade-up">Welcome to Smile Guard</h1>
+            <p data-aos="fade-up" data-aos-delay="100">Efficiently manage your dental practice with Smile Guard. Log in to access patient information, eligibility checks, and more!</p>
+        </section>
+
+        <!-- Login Form -->
+        <section class="form-container">
+            <form id="loginForm" aria-labelledby="loginTitle" data-aos="fade-up" data-aos-delay="200">
+                <h2 id="loginTitle">Log In</h2>
+                <input type="email" id="username" placeholder="Email Address" required aria-label="Email Address">
+                <input type="password" id="password" placeholder="Password" required aria-label="Password">
+                <div class="checkbox-group">
+                    <label><input type="checkbox" id="rememberMe"> Remember Me</label>
+                    <label><input type="checkbox" id="enable2FA"> Enable 2FA</label>
+                </div>
+                <button type="submit" id="loginBtn" aria-label="Log In">
+                    <span class="btn-text">Log In</span>
+                    <span class="loader"></span>
+                </button>
+                <p>Don't have an account yet? <a href="register.html">Create an account</a> and get started today!</p>
+                <a href="#">Forgot username or password?</a>
+            </form>
+
+            <!-- Social Login -->
+            <div class="social-login">
+                <button class="google-login" aria-label="Login with Google"><i class="fab fa-google"></i> Login with Google</button>
+                <button class="facebook-login" aria-label="Login with Facebook"><i class="fab fa-facebook"></i> Login with Facebook</button>
+                <button class="linkedin-login" aria-label="Login with LinkedIn"><i class="fab fa-linkedin"></i> Login with LinkedIn</button>
+            </div>
+
+            <!-- Security Notice -->
+            <div class="security-notice" data-aos="fade-up" data-aos-delay="300">
+                <p><strong>Security Notice:</strong> We value your security. All data is encrypted, ensuring that your patients' sensitive information remains private.</p>
+                <p><strong>Note:</strong> Our system complies with HIPAA regulations to keep your practice and patients' data secure.</p>
+            </div>
+        </section>
+
+        <!-- Dashboard Section -->
+        <section id="dashboard" class="dashboard">
+            <h2>Dashboard</h2>
+            <div class="dashboard-item">
+                <h3>Patient Overview</h3>
+                <p>View and manage patient records.</p>
+                <a href="#patients" class="btn">View Patients</a>
+            </div>
+            <div class="dashboard-item">
+                <h3>Eligibility Check</h3>
+                <p>Check patient eligibility for insurance.</p>
+                <a href="#eligibility" class="btn">Check Eligibility</a>
+            </div>
+            <div class="dashboard-item">
+                <h3>Reports</h3>
+                <p>Generate reports for your practice.</p>
+                <a href="#reports" class="btn">View Reports</a>
+            </div>
+        </section>
+
+        <!-- Patients Section -->
+        <section id="patients" class="patients">
+            <h2>Patients</h2>
+            <div class="patient-list">
+                <div class="patient-card">
+                    <h3>John Doe</h3>
+                    <p>Last Visit: 01/15/2025</p>
+                    <button class="btn">View Details</button>
+                </div>
+                <div class="patient-card">
+                    <h3>Jane Smith</h3>
+                    <p>Last Visit: 12/20/2024</p>
+                    <button class="btn">View Details</button>
+                </div>
+                <!-- More patient cards can be added here -->
+            </div>
+        </section>
+
+        <!-- Eligibility Check Section -->
+        <section id="eligibility" class="eligibility-check">
+            <h2>Eligibility Check</h2>
+            <form id="eligibilityForm">
+                <input type="text" placeholder="Patient ID" required aria-label="Patient ID">
+                <button type="submit" class="btn">Check Eligibility</button>
+            </form>
+            <div class="eligibility-results">
+                <!-- Results will be displayed here after form submission -->
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials">
+            <h2>What Our Users Say</h2>
+            <div class="testimonial">
+                <p>"Smile Guard has revolutionized my dental practice. The eligibility check feature is a game changer!"</p>
+                <strong>- Dr. Sarah Miller</strong>
+            </div>
+            <div class="testimonial">
+                <p>"Easy to use and highly efficient. I highly recommend Smile Guard!"</p>
+                <strong>- Dr. James Brown</strong>
+            </div>
+        </section>
+
+        <!-- Image Section -->
+        <div class="image-container" data-aos="fade-left" data-aos-delay="600">
+            <img src="images/healthcare-professionals.jpg" alt="Healthcare professionals">
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Smile Guard. All rights reserved.</p>
+        <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a>
+    </footer>
+
+    <script src="scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        // Add JavaScript for handling form submissions and other interactions
+    </script>
+</body>
+</html>

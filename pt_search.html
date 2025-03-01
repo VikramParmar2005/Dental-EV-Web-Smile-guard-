@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Search - Smile Guard</title>
+    <link rel="stylesheet" href="pt_search.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Smile Guard</h1>
+        </div>
+        <nav>
+            <a href="login.html" class="nav-link" aria-label="Logout">
+                <i class="fas fa-sign-out-alt"></i> Logout </a>
+            <a href="#" class="nav-link" aria-label="Home">
+                <i class="fas fa-home"></i> Home
+            </a>
+            <a href="#" class="nav-link" aria-label="About">
+                <i class="fas fa-info-circle"></i> About
+            </a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="search-section">
+            <div class="insurance-branding" data-aos="fade-up">
+                <img src="delta-dental-logo.png" alt="Delta Dental" class="carrier-logo">
+                <div class="provider-info">
+                    <h2>Dental Benefits Verification</h2>
+                    <p class="carrier-id">Payer ID: DDPA12345</p>
+                </div>
+            </div>
+
+            <form id="patientSearchForm" class="insurance-form" data-aos="fade-up" data-aos-delay="100">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="subId">
+                            <i class="fas fa-id-card"></i>
+                            Subscriber ID
+                        </label>
+                        <input type="text" id="subId" 
+                               pattern="[A-Za-z0-9]{8,12}" 
+                               title="8-12 alphanumeric characters"
+                               maxlength="12"
+                               required
+                               aria-required="true">
+                        <div class="error-message" id="subIdError" aria-live="polite"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dob">
+                            <i class="fas fa-birthday-cake"></i>
+                            Date of Birth
+                        </label>
+                        <div class="input-group">
+                            <input type="date" id="dob" 
+                                   required
+                                   min="1900-01-01" max="2023-12-31"
+                                   aria-required="true">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <div class="error-message" id="dobError" aria-live="polite"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="relationship">Patient Relationship</label>
+                        <div class="select-wrapper">
+                            <select id="relationship" class="form-control" aria-required="true">
+                                <option value="self">Self (Subscriber)</option>
+                                <option value="spouse">Spouse</option>
+                                <option value="child">Child</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-search" aria-label="Verify Coverage">
+                        <i class="fas fa-search"></i> Verify Coverage
+                        <span class="btn-loader"></span>
+                    </button>
+                    <button type="button" class="btn btn-secondary" aria-label="Check History">
+                        <i class="fas fa-history"></i> Check History
+                    </button>
+                </div>
+            </form>
+        </section>
+
+        <section class="results-section" data-aos="fade-up" data-aos-delay="200" aria-live="polite" style="display: none;">
+            <div class="eligibility-results" id="searchResults">
+                <!-- Results will be dynamically inserted here -->
+            </div>
+        </section>
+
+        <div id="loading" class="hidden">Loading...</div>
+    </main>
+
+    <script src="pt_search.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
+</body>
+</html>

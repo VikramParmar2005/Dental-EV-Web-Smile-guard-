@@ -1,0 +1,23 @@
+[
+  {
+    "benefit_class": "Amalgam",
+    "plan_pays": "80%",
+    "deductible": "Yes",
+    "waiting_period": "N/A",
+    "services_usage": "Frequency: 1 per tooth every 2 Years | Age limit: None"
+  },
+  {
+    "benefit_class": "Bitewing X-Rays",
+    "plan_pays": "100%",
+    "deductible": "N/A",
+    "waiting_period": "N/A",
+    "services_usage": "Frequency: 2 per 1 Service Year | 2 remaining this period | Age limit: None"
+  },
+  {
+    "benefit_class": "Comprehensive and Periodic Exams",
+    "plan_pays": "100%",
+    "deductible": "N/A",
+    "waiting_period": "N/A",
+    "services_usage": "Frequency: 2 per 1 Service Year | 2 remaining this period | Similar procedures impact frequency limitations: D0120, D0130, D0140, D0145, D0150, D0160, D0170, D0180, D9310, D9450 | Age limit: None"
+  }
+]

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Coverage - Smile Guard</title>
+    <link rel="stylesheet" href="ev.css"> <!-- Link to the CSS file -->
+    <script src="ev.js" defer></script>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .benefits-table { width: 100%; border-collapse: collapse; }
+        .benefits-table th, .benefits-table td { border: 1px solid #ddd; padding: 8px; }
+        .benefits-table th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Eligibility Summary</h1>
+    </header>
+    
+    <main class="container">
+        <!-- Patient Lookup Section -->
+        <div class="search-box">
+            <select id="locationSelect">
+                <option value="3463 HIGHWAY 4">3463 HIGHWAY 4</option>
+                <!-- Additional options can be added here -->
+            </select>
+            <select id="doctorSelect">
+                <option value="Mirla Core">Mirla Core</option>
+                <!-- Additional options can be added here -->
+            </select>
+            <button id="lookupButton">Lookup</button>
+        </div>
+
+        <!-- Patient Info Section -->
+        <div class="patient-info">
+            <h2>Benefits for <span id="patientName"></span></h2>
+            <table>
+                <tr><td>Request Date:</td><td id="requestDate"></td></tr>
+                <tr><td>Member Name:</td><td id="memberName"></td></tr>
+                <tr><td>Member ID:</td><td id="memberID"></td></tr>
+                <tr><td>Patient DOB:</td><td id="dob"></td><td>Age: <span id="age"></span></td></tr>
+                <tr><td>Coverage:</td><td id="coverage"></td></tr>
+                <tr><td>Effective Date:</td><td id="effectiveDate"></td></tr>
+                <tr><td>Eligible Through:</td><td id="eligibleThrough"></td></tr>
+                <tr><td>Coverage Level:</td><td id="coverageLevel"></td></tr>
+                <tr><td>Payment Level:</td><td id="paymentLevel"></td></tr>
+            </table>
+        </div>
+
+        <!-- Plan Info Section -->
+        <h3>Plan Information</h3>
+        <table>
+            <tr><td>Service Year:</td><td id="serviceYear"></td></tr>
+            <tr><td>Plan Maximum:</td><td id="planMax"></td></tr>
+            <tr><td>Individual Deductible:</td><td id="individualDeductible"></td></tr>
+            <tr><td>Family Deductible:</td><td id="familyDeductible"></td></tr>
+            <tr><td>Dependent Eligibility:</td><td id="dependentEligibility"></td></tr>
+            <tr><td>Student Eligibility:</td><td id="studentEligibility"></td></tr>
+        </table>
+
+        <!-- Patient Coverage Details Table -->
+        <h3>Coverage Details</h3>
+        <table class="benefits-table" border="1">
+            <thead>
+                <tr>
+                    <th>Benefit Class</th>
+                    <th>% Plan Pays</th>
+                    <th>Deductible</th>
+                    <th>Waiting Period</th>
+                    <th>Services & Usage</th>
+                </tr>
+            </thead>
+            <tbody id="benefitsTable">
+                <tr>
+                    <td>Amalgam</td>
+                    <td>80%</td>
+                    <td>Yes</td>
+                    <td>N/A</td>
+                    <td>Frequency: 2 per tooth every 2 Years<br>Age limit: None</td>
+                </tr>
+                <tr>
+                    <td>Bitewing X-Rays</td>
+                    <td>100%</td>
+                    <td>Yes</td>
+                    <td>N/A</td>
+                    <td>Frequency: 1 per Service Year<br>Age limit: None</td>
+                </tr>
+                <tr>
+                    <td>Comprehensive and Periodic Exams</td>
+                    <td>100%</td>
+                    <td>Yes</td>
+                    <td>N/A</td>
+                    <td>Frequency: 1 per Service Year<br>Age limit: None</td>
+                </tr>
+                <tr>
+                    <td>Dental Crowns</td>
+                    <td>50%</td>
+                    <td>Yes</td>
+                    <td>N/A</td>
+                    <td>Frequency: 1 per tooth every 5 Years<br>Age limit: 12 and Over</td>
+                </tr>
+                <tr>
+                    <td>Dentures and Partials</td>
+                    <td>50%</td>
+                    <td>Yes</td>
+                    <td>N/A</td>
+                    <td>Frequency: 1 per 5 Years<br>Age limit: None</td>
+                </tr>
+                <tr>
+                    <td>Endodontics</td>
+                    <td>80%</td>
+                    <td>Yes</td>
+                    <td>N/A</td>
+                    <td>Frequency: 1 per 5 Years<br>Age limit: None</td>
+                </tr>
+                <tr>
+                    <td>Fixed Partial Dentures</td>
+                    <td>50%</td>
+                    <td>Yes</td>
+                    <td>N/A</td>
+                    <td>Frequency: 1 per 5 Years<br>Age limit: None</td>
+                </tr>
+                <tr>
+                    <td>Fluoride</td>
+                    <td>N/A</td>
+                    <td>No</td>
+                    <td>N/A</td>
+                    <td>Not a Covered Benefit</td>
+                </tr>
+                <tr>
+                    <td>Full Mouth Debridement</td>
+                    <td>100%</td>
+                    <td>Yes</td>
+                    <td>1 per Lifetime</td>
+                    <td>Subject to Contract Limitations if Applicable</td>
+                </tr>
+                <tr>
+                    <td>Full Mouth X-Ray</td>
+                    <td>100%</td>
+                    <td>Yes</td>
+                    <td>1 per 3 Years</td>
+                    <td>Last Service Date: 01/25/2024<br>Age limit: None</td>
+                </tr>
+                <tr>
+                    <td>Gen Anesthesia</td>
+                    <td>80%</td>
+                    <td>Yes</td>
+                    <td>3 per 1 Days</td>
+                    <td>Payable when performed by a licensed dentist in conjunction with covered procedures</td>
+                </tr>
+            </tbody>
+        </table>
+
+       <!-- Search Bar for Dental Codes -->
+<div class="search-bar">
+    <input type="text" id="codeSearch" placeholder="Search by Code or Description...">
+    <button id="searchBtn">Search</button>
+</div>
+
+<!-- Benefits Table -->
+<table class="benefits-table" border="1">
+    <thead>
+        <tr>
+            <th>Code</th>
+            <th>Description</th>
+            <th>% Plan Pays</th>
+            <th>Deductible</th>
+            <th>Waiting Period</th>
+            <th>Frequency</th>
+            <th>Age Limit</th>
+        </tr>
+    </thead>
+    <tbody id="benefitsTable"></tbody>
+</table>
+
+    </main>
+
+    <script>
+        // Fetch Patient Benefits Data
+        fetch('http://localhost:5000/api/patient-benefits')
+            .then(response => response.json())
+            .then(data => {
+                const table = document.getElementById('benefitsTable');
+                table.innerHTML = ""; // Clear existing data before inserting new ones
+                data.forEach(benefit => {
+                    let row = `<tr>
+                        <td>${benefit.benefit_class}</td>
+                        <td>${benefit.plan_pays}</td>
+                        <td>${benefit.deductible}</td>
+                        <td>${benefit.waiting_period}</td>
+                        <td>${benefit.services_usage}</td>
+                    </tr>`;
+                    table.innerHTML += row;
+                });
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+                document.body.innerHTML += "<p style='color: red;'>Failed to load data. Make sure the backend is running.</p>";
+            });
+
+        // Add Event Listener for Search Button (For Future Implementation)
+        document.getElementById("searchBtn").addEventListener("click", function () {
+            alert("Search function not implemented yet!"); 
+        });
+    </script>
+</body>
+</html>
